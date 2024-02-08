@@ -1,4 +1,4 @@
-module github.com/ionos-cloud/go
+module github.com/avirtopeanu-ionos/alpha-sdk-go-dbaas-mariadb
 
 go 1.18
 
