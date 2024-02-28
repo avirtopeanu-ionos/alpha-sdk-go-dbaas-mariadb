@@ -5,7 +5,6 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Id** | Pointer to **string** | The unique ID of the resource. | [optional] |
-|**Metadata** | Pointer to [**BackupMetadata**](BackupMetadata.md) |  | [optional] |
 |**Properties** | Pointer to [**Backup**](Backup.md) |  | [optional] |
 
 ## Methods
@@ -51,31 +50,6 @@ SetId sets Id field to given value.
 `func (o *BackupResponse) HasId() bool`
 
 HasId returns a boolean if a field has been set.
-
-### GetMetadata
-
-`func (o *BackupResponse) GetMetadata() BackupMetadata`
-
-GetMetadata returns the Metadata field if non-nil, zero value otherwise.
-
-### GetMetadataOk
-
-`func (o *BackupResponse) GetMetadataOk() (*BackupMetadata, bool)`
-
-GetMetadataOk returns a tuple with the Metadata field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMetadata
-
-`func (o *BackupResponse) SetMetadata(v BackupMetadata)`
-
-SetMetadata sets Metadata field to given value.
-
-### HasMetadata
-
-`func (o *BackupResponse) HasMetadata() bool`
-
-HasMetadata returns a boolean if a field has been set.
 
 ### GetProperties
 

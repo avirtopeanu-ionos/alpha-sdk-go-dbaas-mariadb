@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The unique ID of the resource. | [optional] |
-|**ClusterId** | Pointer to **string** | The unique ID of the cluster. | [optional] |
+|**ClusterId** | Pointer to **string** | The unique ID of the cluster that was backed up. | [optional] |
+|**Items** | Pointer to [**[]BackupItem**](BackupItem.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewBackupWithDefaults instantiates a new Backup object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *Backup) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *Backup) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *Backup) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *Backup) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetClusterId
 
@@ -75,5 +50,30 @@ SetClusterId sets ClusterId field to given value.
 `func (o *Backup) HasClusterId() bool`
 
 HasClusterId returns a boolean if a field has been set.
+
+### GetItems
+
+`func (o *Backup) GetItems() []BackupItem`
+
+GetItems returns the Items field if non-nil, zero value otherwise.
+
+### GetItemsOk
+
+`func (o *Backup) GetItemsOk() (*[]BackupItem, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItems
+
+`func (o *Backup) SetItems(v []BackupItem)`
+
+SetItems sets Items field to given value.
+
+### HasItems
+
+`func (o *Backup) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 

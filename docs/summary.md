@@ -11,9 +11,9 @@
 ## Models
 
 * [Backup](models/Backup.md)
+* [BackupItem](models/BackupItem.md)
 * [BackupList](models/BackupList.md)
 * [BackupListAllOf](models/BackupListAllOf.md)
-* [BackupMetadata](models/BackupMetadata.md)
 * [BackupResponse](models/BackupResponse.md)
 * [ClusterList](models/ClusterList.md)
 * [ClusterListAllOf](models/ClusterListAllOf.md)

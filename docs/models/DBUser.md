@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Username** | **string** | The username for the initial MariaDB user. Some system usernames are restricted (e.g. \&quot;mariadb\&quot;, \&quot;admin\&quot;, \&quot;standby\&quot;).  | |
+|**Username** | **string** | The username for the initial MariaDB user. Some system usernames are restricted (e.g. \&quot;mariadb\&quot;, \&quot;admin\&quot;, \&quot;standby\&quot;).  The username should be compliant with the following rules: - Must not exceed 16 characters - Must start with a letter - Must contain only letters, numbers, or underscores  | |
 |**Password** | **string** | The password for a MariaDB user. | |
 
 ## Methods
