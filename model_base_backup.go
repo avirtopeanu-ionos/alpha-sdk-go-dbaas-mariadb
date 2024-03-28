@@ -15,35 +15,35 @@ import (
 	"time"
 )
 
-// BackupItem A single backup.
-type BackupItem struct {
+// BaseBackup A single base backup.
+type BaseBackup struct {
 	// The ISO 8601 creation timestamp.
 	Created *IonosTime `json:"created,omitempty"`
-	// The size of the backup in Mebibytes (MiB). This is the size of the binary backup file that was stored.
+	// The size of the backup in MiB. This is the size of the binary backup file that was stored.
 	Size *int32 `json:"size,omitempty"`
 }
 
-// NewBackupItem instantiates a new BackupItem object
+// NewBaseBackup instantiates a new BaseBackup object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewBackupItem() *BackupItem {
-	this := BackupItem{}
+func NewBaseBackup() *BaseBackup {
+	this := BaseBackup{}
 
 	return &this
 }
 
-// NewBackupItemWithDefaults instantiates a new BackupItem object
+// NewBaseBackupWithDefaults instantiates a new BaseBackup object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewBackupItemWithDefaults() *BackupItem {
-	this := BackupItem{}
+func NewBaseBackupWithDefaults() *BaseBackup {
+	this := BaseBackup{}
 	return &this
 }
 
 // GetCreated returns the Created field value
 // If the value is explicit nil, the zero value for time.Time will be returned
-func (o *BackupItem) GetCreated() *time.Time {
+func (o *BaseBackup) GetCreated() *time.Time {
 	if o == nil {
 		return nil
 	}
@@ -58,7 +58,7 @@ func (o *BackupItem) GetCreated() *time.Time {
 // GetCreatedOk returns a tuple with the Created field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BackupItem) GetCreatedOk() (*time.Time, bool) {
+func (o *BaseBackup) GetCreatedOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -71,14 +71,14 @@ func (o *BackupItem) GetCreatedOk() (*time.Time, bool) {
 }
 
 // SetCreated sets field value
-func (o *BackupItem) SetCreated(v time.Time) {
+func (o *BaseBackup) SetCreated(v time.Time) {
 
 	o.Created = &IonosTime{v}
 
 }
 
 // HasCreated returns a boolean if a field has been set.
-func (o *BackupItem) HasCreated() bool {
+func (o *BaseBackup) HasCreated() bool {
 	if o != nil && o.Created != nil {
 		return true
 	}
@@ -88,7 +88,7 @@ func (o *BackupItem) HasCreated() bool {
 
 // GetSize returns the Size field value
 // If the value is explicit nil, the zero value for int32 will be returned
-func (o *BackupItem) GetSize() *int32 {
+func (o *BaseBackup) GetSize() *int32 {
 	if o == nil {
 		return nil
 	}
@@ -100,7 +100,7 @@ func (o *BackupItem) GetSize() *int32 {
 // GetSizeOk returns a tuple with the Size field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *BackupItem) GetSizeOk() (*int32, bool) {
+func (o *BaseBackup) GetSizeOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -109,14 +109,14 @@ func (o *BackupItem) GetSizeOk() (*int32, bool) {
 }
 
 // SetSize sets field value
-func (o *BackupItem) SetSize(v int32) {
+func (o *BaseBackup) SetSize(v int32) {
 
 	o.Size = &v
 
 }
 
 // HasSize returns a boolean if a field has been set.
-func (o *BackupItem) HasSize() bool {
+func (o *BaseBackup) HasSize() bool {
 	if o != nil && o.Size != nil {
 		return true
 	}
@@ -124,7 +124,7 @@ func (o *BackupItem) HasSize() bool {
 	return false
 }
 
-func (o BackupItem) MarshalJSON() ([]byte, error) {
+func (o BaseBackup) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Created != nil {
 		toSerialize["created"] = o.Created
@@ -137,38 +137,38 @@ func (o BackupItem) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableBackupItem struct {
-	value *BackupItem
+type NullableBaseBackup struct {
+	value *BaseBackup
 	isSet bool
 }
 
-func (v NullableBackupItem) Get() *BackupItem {
+func (v NullableBaseBackup) Get() *BaseBackup {
 	return v.value
 }
 
-func (v *NullableBackupItem) Set(val *BackupItem) {
+func (v *NullableBaseBackup) Set(val *BaseBackup) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableBackupItem) IsSet() bool {
+func (v NullableBaseBackup) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableBackupItem) Unset() {
+func (v *NullableBaseBackup) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableBackupItem(val *BackupItem) *NullableBackupItem {
-	return &NullableBackupItem{value: val, isSet: true}
+func NewNullableBaseBackup(val *BaseBackup) *NullableBaseBackup {
+	return &NullableBaseBackup{value: val, isSet: true}
 }
 
-func (v NullableBackupItem) MarshalJSON() ([]byte, error) {
+func (v NullableBaseBackup) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableBackupItem) UnmarshalJSON(src []byte) error {
+func (v *NullableBaseBackup) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

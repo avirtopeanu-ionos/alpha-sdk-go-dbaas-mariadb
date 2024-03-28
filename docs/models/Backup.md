@@ -5,7 +5,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**ClusterId** | Pointer to **string** | The unique ID of the cluster that was backed up. | [optional] |
-|**Items** | Pointer to [**[]BackupItem**](BackupItem.md) |  | [optional] |
+|**EarliestRecoveryTargetTime** | Pointer to [**time.Time**](time.Time.md) | The oldest available timestamp to which you can restore. | [optional] |
+|**Size** | Pointer to **int32** | Size of all base backups in MiB. This is at least the sum of all base backup sizes.  | [optional] |
+|**BaseBackups** | Pointer to [**[]BaseBackup**](BaseBackup.md) |  | [optional] |
 
 ## Methods
 
@@ -51,29 +53,79 @@ SetClusterId sets ClusterId field to given value.
 
 HasClusterId returns a boolean if a field has been set.
 
-### GetItems
+### GetEarliestRecoveryTargetTime
 
-`func (o *Backup) GetItems() []BackupItem`
+`func (o *Backup) GetEarliestRecoveryTargetTime() time.Time`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEarliestRecoveryTargetTime returns the EarliestRecoveryTargetTime field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEarliestRecoveryTargetTimeOk
 
-`func (o *Backup) GetItemsOk() (*[]BackupItem, bool)`
+`func (o *Backup) GetEarliestRecoveryTargetTimeOk() (*time.Time, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEarliestRecoveryTargetTimeOk returns a tuple with the EarliestRecoveryTargetTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEarliestRecoveryTargetTime
 
-`func (o *Backup) SetItems(v []BackupItem)`
+`func (o *Backup) SetEarliestRecoveryTargetTime(v time.Time)`
 
-SetItems sets Items field to given value.
+SetEarliestRecoveryTargetTime sets EarliestRecoveryTargetTime field to given value.
 
-### HasItems
+### HasEarliestRecoveryTargetTime
 
-`func (o *Backup) HasItems() bool`
+`func (o *Backup) HasEarliestRecoveryTargetTime() bool`
 
-HasItems returns a boolean if a field has been set.
+HasEarliestRecoveryTargetTime returns a boolean if a field has been set.
+
+### GetSize
+
+`func (o *Backup) GetSize() int32`
+
+GetSize returns the Size field if non-nil, zero value otherwise.
+
+### GetSizeOk
+
+`func (o *Backup) GetSizeOk() (*int32, bool)`
+
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSize
+
+`func (o *Backup) SetSize(v int32)`
+
+SetSize sets Size field to given value.
+
+### HasSize
+
+`func (o *Backup) HasSize() bool`
+
+HasSize returns a boolean if a field has been set.
+
+### GetBaseBackups
+
+`func (o *Backup) GetBaseBackups() []BaseBackup`
+
+GetBaseBackups returns the BaseBackups field if non-nil, zero value otherwise.
+
+### GetBaseBackupsOk
+
+`func (o *Backup) GetBaseBackupsOk() (*[]BaseBackup, bool)`
+
+GetBaseBackupsOk returns a tuple with the BaseBackups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBaseBackups
+
+`func (o *Backup) SetBaseBackups(v []BaseBackup)`
+
+SetBaseBackups sets BaseBackups field to given value.
+
+### HasBaseBackups
+
+`func (o *Backup) HasBaseBackups() bool`
+
+HasBaseBackups returns a boolean if a field has been set.
 
 

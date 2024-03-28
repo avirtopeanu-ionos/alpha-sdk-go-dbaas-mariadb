@@ -11,10 +11,10 @@
 ## Models
 
 * [Backup](models/Backup.md)
-* [BackupItem](models/BackupItem.md)
 * [BackupList](models/BackupList.md)
 * [BackupListAllOf](models/BackupListAllOf.md)
 * [BackupResponse](models/BackupResponse.md)
+* [BaseBackup](models/BaseBackup.md)
 * [ClusterList](models/ClusterList.md)
 * [ClusterListAllOf](models/ClusterListAllOf.md)
 * [ClusterMetadata](models/ClusterMetadata.md)
@@ -40,4 +40,6 @@
 * [MariadbVersion](models/MariadbVersion.md)
 * [Pagination](models/Pagination.md)
 * [PaginationLinks](models/PaginationLinks.md)
+* [PatchClusterProperties](models/PatchClusterProperties.md)
+* [PatchClusterRequest](models/PatchClusterRequest.md)
 * [State](models/State.md)
